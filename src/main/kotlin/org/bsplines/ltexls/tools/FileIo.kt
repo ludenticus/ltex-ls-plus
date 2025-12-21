@@ -191,6 +191,8 @@ object FileIo {
       "vb"
     } else if (fileName.endsWith(".v")) {
       "verilog"
+    } else if (fileName.endsWith(".wiki")) {
+      "vimwiki"
     } else {
       null
     }

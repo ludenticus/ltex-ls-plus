@@ -20,6 +20,7 @@ import org.bsplines.ltexls.parsing.program.ProgramAnnotatedTextBuilder
 import org.bsplines.ltexls.parsing.program.ProgramCommentRegexs
 import org.bsplines.ltexls.parsing.restructuredtext.RestructuredtextAnnotatedTextBuilder
 import org.bsplines.ltexls.parsing.typst.TypstAnnotatedTextBuilder
+import org.bsplines.ltexls.parsing.vimwiki.VimwikiAnnotatedTextBuilder
 import org.bsplines.ltexls.settings.Settings
 import org.bsplines.ltexls.tools.I18n
 import org.bsplines.ltexls.tools.Logging
@@ -172,6 +173,10 @@ abstract class CodeAnnotatedTextBuilder(
 
         "typst" -> {
           TypstAnnotatedTextBuilder(codeLanguageId)
+        }
+
+        "vimwiki" -> {
+          VimwikiAnnotatedTextBuilder(codeLanguageId)
         }
 
         "asciidoc" -> {

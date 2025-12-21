@@ -21,6 +21,7 @@ import org.bsplines.ltexls.parsing.program.ProgramCommentRegexs
 import org.bsplines.ltexls.parsing.program.ProgramFragmentizer
 import org.bsplines.ltexls.parsing.restructuredtext.RestructuredtextFragmentizer
 import org.bsplines.ltexls.parsing.typst.TypstFragmentizer
+import org.bsplines.ltexls.parsing.vimwiki.VimwikiFragmentizer
 import org.bsplines.ltexls.settings.Settings
 import org.bsplines.ltexls.tools.I18n
 import org.bsplines.ltexls.tools.Logging
@@ -113,6 +114,10 @@ abstract class CodeFragmentizer(
 
         "typst" -> {
           TypstFragmentizer(codeLanguageId)
+        }
+
+        "vimwiki" -> {
+          VimwikiFragmentizer(codeLanguageId)
         }
 
         else -> {
